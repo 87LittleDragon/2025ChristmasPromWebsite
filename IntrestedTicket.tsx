@@ -22,11 +22,11 @@ export default function IntrestedTicket(){
       <>
       <h1 className={`${cinzel.className} text-4xl md:text-6xl mt-[40vh] text-center`}>Grab the ticket if you want to join us!</h1>
       {/* pc view */}
-    <div className="relative w-screen h-[80vh] mx-auto mt-[10vh] overflow-clip hidden md:flex">
-      <div className=" w-[1000ox] mx-auto">
-        <Image src="/ChristmasProm2025/Ticket1.png" alt="ticket image" width={223} height={324} className="absolute z-10 flex-223"/>
+    <div className="relative h-[80vh] mt-[10vh] overflow-clip hidden md:flex">
+      <div className="mx-auto w-[1002px]">
+        <Image src="/ChristmasProm2025/Ticket1.png" alt="ticket image" width={223} height={324} className="absolute z-10 "/>
         <div >
-      <PeelWrapper className="absolute inset-x-[220px] z-20 flex-779" width={779} height={324} drag corner={"TOP_RIGHT"} peelPosition={{x: 700, y:200}} options={{
+      <PeelWrapper className="absolute inset-x-[220px] z-20 " width={779} height={324} drag corner={"TOP_RIGHT"} peelPosition={{x: 700, y:200}} options={{
         backShadow: true,
         topShadow: false,
         backShadowSize: 0.12,
@@ -39,7 +39,8 @@ export default function IntrestedTicket(){
     </div>
 </div>
 {/* Mobile View */}
-<div className="relative flex w-screen ml-[5%] h-lvh mt-[5vh] overflow-clip md:hidden">
+<div className="relative flex h-lvh mt-[5vh] overflow-clip md:hidden">
+  <div className="mx-auto w-[377px]">
       <Image src="/ChristmasProm2025/Ticket1.png" alt="ticket image" width={84} height={122} className="absolute"/>
 
     <div>
@@ -53,6 +54,7 @@ export default function IntrestedTicket(){
       <PeelBottom><div className="flex h-full"><h1 className={`${cinzel.className} text-4xl text-center m-auto`}>Thank you for joining us!</h1></div></PeelBottom>
     </PeelWrapper>
     </div>
+</div>
 </div>
 </>)
 }
