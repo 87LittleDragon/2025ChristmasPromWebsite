@@ -5,16 +5,16 @@ import ticketFront from "@/public/ChristmasProm2025/Ticket2.png"
 import ticketBack from "@/public/ChristmasProm2025/TicketBack.png"
 import { cinzel } from "@/app/ui/fonts";
 
+import { intrestedIncrement } from "@/app/lib/action";
+
 let toggleInterest = false;
 
 function interested() {
   if(toggleInterest){
     return
   }
-  console.log("Ticket grabbed! We will reach out to you with more details soon.");
+  intrestedIncrement();
   toggleInterest = true;
-  //alert("Ticket grabbed! We will reach out to you with more details soon.");
-
 };
 
 export default function IntrestedTicket(){
