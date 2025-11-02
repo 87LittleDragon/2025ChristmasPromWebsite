@@ -14,7 +14,8 @@ const detailsV:DetailV[] =  [
     {id:2, title:"Time:", value: "5:00 PM - 8:00 PM"},
     {id:3, title:"Venue:", value: "Hall@TKHC"},
     {id:4, title:"Theme:", value: "European vintage Christmas"},
-    {id:5, title:"Audience:", value: "G.9-12 Students, Teachers and TKHC Alumni"}
+    {id:5, title:"Audience:", value: "G.9-12 Students, Teachers and TKHC Alumni"},
+    {id:6, title: "Price", value: "$100 for 1, $180 for 2"}
 ]
 
 
@@ -38,8 +39,9 @@ export default function Details(){
         <p key={detailsV.value} className='text-right  text-1xl md:text-4xl'>{detailsV.value}</p>
     </div>
     )
+    // bg-neutral-700/75
     return(
-        <motion.div ref={targetRef} style={{ scale }} className={`${cinzel.className} mt-[50dvh] bg-neutral-700/75 bg-opacity-0 mx-[5vw] rounded-4xl`}>
+        <motion.div ref={targetRef} style={{ scale }} className={`${cinzel.className} mt-[50dvh] bg-[#726254]/75 mx-[5vw] rounded-4xl`}>
             <h3 className="text-4xl md:text-6xl text-center">Details</h3>
             {listDetails}
         </motion.div>
