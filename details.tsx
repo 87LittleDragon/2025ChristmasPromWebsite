@@ -10,7 +10,7 @@ interface DetailV {
 }
 
 const detailsV:DetailV[] =  [
-    {id:1, title:'Date:', value: "December 21th, 2025 (Saturday)"},
+    {id:1, title:'Date:', value: "December 21th, 2025 (Sunday)"},
     {id:2, title:"Time:", value: "5:00 PM - 8:00 PM"},
     {id:3, title:"Venue:", value: "Hall@TKHC"},
     {id:4, title:"Theme:", value: "European vintage Christmas"},
@@ -27,7 +27,7 @@ export default function Details(){
     });
     //const smoothedScrollY = useSpring(scrollY, { stiffness: 70});
     useMotionValueEvent(scrollYProgress, "change", (val) => {
-        console.log("Scroll Y:", val)
+        // console.log("Scroll Y:", val)
     });
     const scale = useTransform(scrollYProgress, [0, 0.35, 0.65, 1], [0, 1, 1, 0]);
 

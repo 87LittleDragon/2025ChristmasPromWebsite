@@ -20,12 +20,12 @@ function interested() {
 export default function IntrestedTicket(){
     return(
       <>
-      <h1 className={`${cinzel.className} text-4xl md:text-6xl mt-[40vh] text-center`}>Grab the ticket if you want to join us!</h1>
+      <h1 className={`${cinzel.className} text-4xl lg:text-6xl mt-[40vh] text-center`}>Grab the ticket if you want to join us!</h1>
       {/* pc view */}
-    <div className="relative h-[80vh] mt-[10vh] overflow-clip hidden md:flex">
+    <div className="relative h-[80vh] mt-[10vh] overflow-clip hidden lg:flex">
       <div className="mx-auto w-[1002px]">
         <Image src="/ChristmasProm2025/Ticket1.png" alt="ticket image" width={223} height={324} className="absolute z-10 "/>
-        <div >
+        <div className="touch-none" onClick={e => e.preventDefault()}>
       <PeelWrapper className="absolute inset-x-[220px] z-20 " width={779} height={324} drag corner={"TOP_RIGHT"} peelPosition={{x: 700, y:200}} options={{
         backShadow: true,
         topShadow: false,
@@ -39,19 +39,19 @@ export default function IntrestedTicket(){
     </div>
 </div>
 {/* Mobile View */}
-<div className="relative flex h-lvh mt-[5vh] overflow-clip md:hidden">
+<div className="relative flex h-lvh mt-[5vh] overflow-clip lg:hidden">
   <div className="mx-auto w-[377px]">
       <Image src="/ChristmasProm2025/Ticket1.png" alt="ticket image" width={84} height={122} className="absolute"/>
 
-    <div>
+    <div className="touch-none" onClick={e => e.preventDefault()}>
     <PeelWrapper className="inset-x-[82px] z-20 touch-none" width={293} height={122} drag corner={"TOP_RIGHT"} peelPosition={{x: 260, y:50}} options={{
       backShadow: true,
         topShadow: false,
         backShadowSize: 0.12,
     }} handleDrag={interested}>
-      <PeelTop><Image src={ticketFront} alt="ticket front" width={293} height={122} /></PeelTop>
-      <PeelBack><Image src={ticketBack} alt="ticket back" width={293} height={122} /></PeelBack>
-      <PeelBottom><div className="flex h-full"><h1 className={`${cinzel.className} text-4xl text-center m-auto`}>Thank you for joining us!</h1></div></PeelBottom>
+      <PeelTop><Image src={ticketFront} alt="ticket front" width={293} height={122} className="touch-none" /></PeelTop>
+      <PeelBack><Image src={ticketBack} alt="ticket back" width={293} height={122} className="touch-none" /></PeelBack>
+      <PeelBottom><div className="flex h-full"><h1 className={`${cinzel.className} text-4xl text-center m-auto touch-none`}>Thank you for joining us!</h1></div></PeelBottom>
     </PeelWrapper>
     </div>
 </div>
