@@ -7,6 +7,8 @@ import { cinzel } from "@/app/ui/fonts";
 
 import { intrestedIncrement } from "@/app/lib/action";
 
+import TicketDetails from "./TIcketDetails"
+
 let toggleInterest = false;
 
 function interested() {
@@ -22,6 +24,7 @@ export default function IntrestedTicket(){
       <>
       <h1 className={`${cinzel.className} text-4xl lg:text-6xl mt-[40vh] text-center`}>Grab the ticket below to join us!</h1>
       {/* pc view */}
+    <div className="">
     <div className="relative h-[80vh] mt-[10vh] overflow-clip hidden lg:flex">
       <div className="mx-auto w-[1045px] h-[365px] bg-[#331612] bg-[url(@/public/ChristmasProm2025/ticketBackground2.jpg)] bg-blend-color-burn border-[#401c17] bg-no-repeat border-22 flex items-center">
         <div className="mx-auto w-[1001px] h-[324px]">
@@ -38,14 +41,16 @@ export default function IntrestedTicket(){
       }} handleDrag={interested}>
         <PeelTop><Image src={ticketFront} alt="ticket front" width={781} height={324} /></PeelTop>
         <PeelBack><Image src={ticketBack} alt="ticket back" width={781} height={324}/></PeelBack>
-        <PeelBottom><div className="h-full flex flex-col"><h1 className={`${cinzel.className} text-9xl text-center m-auto text-white`}>à bientôt</h1><h1 className={`${cinzel.className} text-6xl text-right  text-white`}>See you there!</h1></div></PeelBottom>
+        {/* <PeelBottom><div className="h-full flex flex-col"><h1 className={`${cinzel.className} text-9xl text-center m-auto text-white`}>à bientôt</h1><h1 className={`${cinzel.className} text-6xl text-right  text-white`}>See you there!</h1></div></PeelBottom> */}
+        <PeelBottom><div className="h-full flex flex-col"><TicketDetails/></div></PeelBottom>      
+      
       </PeelWrapper>
       </div>
       </div>
     </div>
 </div>
 {/* Mobile View */}
-<div className="relative flex h-lvh mt-[5vh] overflow-clip lg:hidden">
+<div className="relative flex h-lvh mt-[5vh] overflow-y-clip overflow-x-scroll lg:hidden">
   <div className="mx-auto w-[400px] h-[145px] bg-[#331612] bg-[url(@/public/ChristmasProm2025/ticketBackground2.jpg)] bg-blend-color-burn border-[#401c17] border-12 bg-no-repeat flex items-center ">
   <div className="mx-auto w-[377px] h-[122px]">
       <Image src="/ChristmasProm2025/Ticket1.png" alt="ticket image" width={84} height={122} className="absolute"/>
@@ -61,9 +66,11 @@ export default function IntrestedTicket(){
     }} handleDrag={interested}>
       <PeelTop><Image src={ticketFront} alt="ticket front" width={293} height={122} className="touch-none" /></PeelTop>
       <PeelBack><Image src={ticketBack} alt="ticket back" width={293} height={122} className="touch-none" /></PeelBack>
-      <PeelBottom><div className="h-full flex flex-col"><h1 className={`${cinzel.className} text-5xl text-center m-auto text-white`}>à bientôt</h1><h1 className={`${cinzel.className} text-2xl text-right  text-white`}>See you there!</h1></div></PeelBottom>
+      {/* <PeelBottom><div className="h-full flex flex-col"><h1 className={`${cinzel.className} text-5xl text-center m-auto text-white`}>à bientôt</h1><h1 className={`${cinzel.className} text-2xl text-right  text-white`}>See you there!</h1></div></PeelBottom> */}
+      <PeelBottom><div className="h-full flex flex-col"><TicketDetails/></div></PeelBottom>
     </PeelWrapper>
     </div>
+</div>
 </div>
 </div>
 </div>
