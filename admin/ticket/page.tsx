@@ -8,7 +8,8 @@ const pricePerTicket = 80
 export default function page(){
     function calculatePrice(quantity:number){
         setTicketQuantity(quantity);
-        setPrice(quantity * pricePerTicket)
+        setPrice(quantity * pricePerTicket);
+        calculateChanges(moneyRecieved as unknown as number)
     }
 
     function calculateChanges(moneyRecieved:number){
@@ -34,7 +35,7 @@ export default function page(){
 
 
     return(
-        <form action={handelSubmit} ref={formRef} className="flex flex-col gap-2 p-4 text-white">
+        <form action={handelSubmit} ref={formRef} className="flex flex-col gap-2 p-4 text-white bg-[#331612]/80 bg-blend-color-burn rounded-xl m-4">
             <label>Full Name</label>
             <input type="text" name="fullName" required className="bg-white text-black rounded-xs"/>
             <br/>
@@ -48,7 +49,7 @@ export default function page(){
             <input type="number" name="ticketQuantity" min="1" required className="bg-white text-black rounded-xs" value={ticketQuantity} onChange={e => calculatePrice(e.target.valueAsNumber)}/>
             <br/>
             <label> money recieved</label>
-            <input type="number" name="moneyRecieved" min={pricePerTicket} className="bg-white text-black rounded-xs" value={moneyRecieved}  onChange={e => calculateChanges(e.target.valueAsNumber)}/>
+            <input type="number" name="moneyRecieved" min={price} className="bg-white text-black rounded-xs" value={moneyRecieved}  onChange={e => calculateChanges(e.target.valueAsNumber)}/>
 
             <input type="hidden" name="price" value={price}/>
             <label>Total Price: ${price}</label>
