@@ -8,9 +8,9 @@ interface DetailV {
 
 const detailsV:DetailV[] =  [
     {id:1, title:'Early bird ($80):', value: "13/11 - 14/11"},
-    {id:1, title:'Regular Ticket:', value: "17/11 - 26/11"},
-    {id:2, title:"Time:", value: "Lunch recess 13:20 - 13:50"},
-    {id:3, title:"Venue:", value: "Cover Playground @TKHC"},
+    {id:2, title:'Regular Ticket:', value: "24/11 - 28/11"},
+    {id:3, title:"Time:", value: "Lunch recess 13:20 - 13:50"},
+    {id:4, title:"Venue:", value: "Cover Playground @TKHC"},
 ]
 
 export default function TicketDetails(){
@@ -21,8 +21,8 @@ export default function TicketDetails(){
     </div>)
 
     return (
-        <div className={`${cinzel.className} text-center m-auto text-white`}>
-                    <h3 className="text-2xl lg:text-6xl text-center pb-1 lg:pb-10">Grab a ticket at:</h3>
+        <div className={`${cinzel.className} text-center m-auto text-white scale-80 md:scale-90 lg:scale-100`}>
+                    <h3 className="text-1xl lg:text-6xl text-center pb-0.5 lg:pb-10">Grab a ticket at:</h3>
                     {listDetails}
                     <p className='text-[7px] lg:text-3xl'>There are also some walk-in tickets</p>
         </div>

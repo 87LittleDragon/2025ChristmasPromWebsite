@@ -17,7 +17,7 @@ export default function Title(){
 
     return(
         <div>
-            <motion.h1 ref={targetRef} style={{ x: moveLX }} className={title1.className.toString() +" text-6xl font-semibold md:text-[248px] pt-[30dvh] md:pt-[40dvh] ml-3 text-center"}>Noël l’ancien</motion.h1>
+            <motion.h1 ref={targetRef} style={{ x: moveLX }} className={title1.className.toString() +" text-6xl font-semibold md:text-[248px] pt-[30dvh] md:pt-[40dvh] ml-3 text-center"}>Noël ancien</motion.h1>
             <motion.h2 ref={targetRef} style={{ x: moveRX }} className={title2.className.toString() +" text-4xl  md:text-7xl mt-0 mr-[5%] md:mr-[20%]  text-right"}>PROM NIGHT</motion.h2>
         </div>
 

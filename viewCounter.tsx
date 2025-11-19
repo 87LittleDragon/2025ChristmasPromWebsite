@@ -1,5 +1,5 @@
 'use client';
-import { viewCountIncrement } from "@/app/lib/action";
+import { viewCountIncrement } from "@/app/action/view";
 import { useEffect, startTransition } from 'react';
  
 

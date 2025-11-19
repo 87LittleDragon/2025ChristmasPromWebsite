@@ -5,7 +5,7 @@ import ticketFront from "@/public/ChristmasProm2025/Ticket2.png"
 import ticketBack from "@/public/ChristmasProm2025/TicketBack.png"
 import { cinzel } from "@/app/ui/fonts";
 
-import { intrestedIncrement } from "@/app/lib/action";
+import { intrestedIncrement } from "@/app/action/view";
 
 import TicketDetails from "./TIcketDetails"
 
