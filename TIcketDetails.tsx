@@ -7,7 +7,7 @@ interface DetailV {
 }
 
 const detailsV:DetailV[] =  [
-    {id:1, title:'Early bird ($80):', value: "13/11 - 14/11"},
+    {id:1, title:'Early bird ($80):', value: "20/11 - 21/11"},
     {id:2, title:'Regular Ticket:', value: "24/11 - 28/11"},
     {id:3, title:"Time:", value: "Lunch recess 13:20 - 13:50"},
     {id:4, title:"Venue:", value: "Cover Playground @TKHC"},
