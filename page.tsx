@@ -2,6 +2,7 @@ import Details from './details'
 import IntrestedTicket from './IntrestedTicket'
 import Title from './title'
 import ViewCounter from './viewCounter'
+import SuggestionForm from './suggestionForm'
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function Page(){
         <Title/>
         <Details/>
         <IntrestedTicket/>
+        <SuggestionForm/>
         </>
     )
 }

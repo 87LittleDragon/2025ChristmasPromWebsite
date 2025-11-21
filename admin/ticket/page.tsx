@@ -1,6 +1,6 @@
 'use client'
 
-import { getDBTicketNumber, setDBTicketNumber, recordSell } from "@/app/action/tickets"
+import { getDBTicketNumber, setDBTicketNumber, recordSell } from "@/app/action/dataBase"
 import { useState, useRef} from "react"
 const pricePerTicket = 80
 
